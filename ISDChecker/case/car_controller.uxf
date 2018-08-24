@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="1.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>42</x>
+      <y>36</y>
+      <w>1062</w>
+      <h>372</h>
+    </coordinates>
+    <panel_attributes>title: car_controller
+_sensorReader~id1_|_accelerometerReader~id2_|_sensorWriter~id3_|_accelerometerWriter~id4_|_sensor~id5_|_accelerometer~id6_|_stopProc~id7_|_MainProc~id8_
+
+id1-&gt;id5:id1,id5:e1{x=1},e2
+id5-&gt;id1:id5,id1:e4,e3
+
+id1-&gt;id8:id1,id8:e5{x=0},e6{x=1}
+
+id1-&gt;id6:id1,id6:e7,e8
+id6-&gt;id1:id6,id1:e10,e9
+id1-&gt;id8:id1,id8:e11{x=0},e12{x=1}
+
+
+
+
+iframe{:int (p=1) ISR1 [x==0]
+id3-&gt;id5:id3,id5:e13,e14
+id5-&gt;id3:id5,id3:e16,e15
+
+iframe}
+
+
+iframe{:int (p=1) ISR2 [x==0]
+id4-&gt;id6:id4,id6:e17,e18
+id6-&gt;id4:id6,id4:e20,e19
+
+iframe}
+
+iframe{:int (p=2) ISR3
+
+id7-&gt;id8:id7,id8:e21,e22
+
+iframe}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>750</x>
+      <y>438</y>
+      <w>144</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>spec:
+2&lt;=proj(e4-e1)&lt;=6
+0&lt;e5-e4&lt;1
+1&lt;proj(e6-e5)&lt;3
+2&lt;proj(e10-e7)&lt;=6
+0&lt;e11-e10&lt;1
+1&lt;proj(e12-e11)&lt;3
+
+
+4&lt;proj(e16-e13)&lt;8
+4&lt;proj(e20-e17)&lt;=8
+1&lt;=proj(e22-e21)&lt;=2
+
+prop:
+e6-e1&lt;29
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

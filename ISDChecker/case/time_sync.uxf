@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>60</x>
+      <y>30</y>
+      <w>630</w>
+      <h>620</h>
+    </coordinates>
+    <panel_attributes>title: time_sync
+_TimeReader~id1_|_Counter~id2_|_Buffer~id3_|_Proc~id4_
+iframe{:loop (1,6)
+id1-&gt;id2:id1,id2:e1{x=1},e2
+id2-&gt;id1:id1,id2:e4,e3
+
+id1-&gt;id3:id1,id3:e5{x=0},e6{x=1}
+
+id1-&gt;id2:id1,id2:e7,e8
+id2-&gt;id1:id1,id2:e10,e9
+
+id1-&gt;id3:id1,id3:e11{x=0},e12{x=1}
+
+id1-&gt;id4:id1,id4:e13,e14
+
+id4-&gt;id3:id4,id3:e16{x=1},e15{x=0}
+iframe}
+iframe{:int (p=1) CAN
+iframe{:opt [x==0]
+id1-&gt;id2:id1,id2:e17,e18
+id2-&gt;id1:id1,id2:e20,e19
+
+id1-&gt;id3:id1,id3:e21,e22
+iframe}
+iframe}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>720</x>
+      <y>410</y>
+      <w>230</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>spec:
+
+8&lt;=proj(e4-e1)&lt;=16
+8&lt;=proj(e10-e7)&lt;=16
+10&lt;proj(e20-e17)&lt;=20
+0&lt;e13-e12&lt;2
+
+prop:
+e6&lt;e22</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

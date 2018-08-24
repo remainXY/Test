@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>0</x>
+      <y>40</y>
+      <w>610</w>
+      <h>500</h>
+    </coordinates>
+    <panel_attributes>title: satellite_spin
+_CC~id1_|_CU~id2_|_TT~id3_|_GU~id4_
+
+iframe{:int (p=2) QUERY
+	iframe{:opt [COMP_FLAG==1]
+id1-&gt;id2:id1,id2:e0,e1
+id2-&gt;id1:id1,id2:e3,e2
+	iframe}
+iframe}
+
+id2-&gt;id1:id1,id2:e5,e4{COMP_FLAG=0}
+
+id2-&gt;id3:id2,id3:e6{COMP_FLAG=1},e7
+id3-&gt;id2:id2,id3:e9,e8
+
+
+
+
+iframe{:loop(1,3) int (p=1) COMM
+id2-&gt;id4:id2,id4:e10,e11
+id4-&gt;id2:id4,id2:e13,e12	
+iframe}
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>630</x>
+      <y>380</y>
+      <w>220</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>spec:
+0.5&lt;=e2-e1&lt;=0.8
+e6-e4=0.1
+30&lt;=e8-e7&lt;=35
+0.2&lt;=e9-e8&lt;=1.4
+1&lt;=e11-e10&lt;=2
+0.6&lt;=proj(e3-e0)&lt;=1
+2&lt;=proj(e13-e10)&lt;=5
+prop:
+e13-e10&lt;=8
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

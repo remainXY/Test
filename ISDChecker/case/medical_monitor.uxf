@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="1.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>63</x>
+      <y>70</y>
+      <w>1127</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>title: medical_monitor
+
+_SensorReader~id1_|_Sensor~id2_|_filter~id3_|_checker~id4_|_buffer~id5_|_alarm~id6_|_displayer~id7_
+
+id1-&gt;id2:id1,id2:e1{ready==1},e2
+id2-&gt;id1:id1,id2:e4,e3
+
+id1-&gt;id3:id1,id3:e5,e6
+id3-&gt;id4:id3,id4:e7,e8	
+
+id4-&gt;id5:id4,id5:e9{ready==0},e10{ready==1}
+
+id5-&gt;id7:id5,id7:e11,e12
+
+iframe{:int (p=1) ISR1 [ready==0]
+id4-&gt;id6:id4,id6:e13,e14
+id6-&gt;id5:id6,id5:e16,e15
+id5-&gt;id7:id5,id7:e17,e18
+
+iframe}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>665</x>
+      <y>413</y>
+      <w>168</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>spec:
+2&lt;=proj(e4-e1)&lt;=3
+0&lt;e5-e4&lt;1
+1&lt;proj(e6-e5)&lt;2
+0&lt;e7-e6&lt;1
+1&lt;=proj(e8-e7)&lt;=2
+0&lt;e9-e8&lt;1
+1&lt;=proj(e10-e9)&lt;=2
+0&lt;e11-e10&lt;1
+0&lt;proj(e12-e11)&lt;1
+
+0&lt;e14-e13&lt;1
+5&lt;e18-e14&lt;7
+
+prop:
+e12-e1&lt;20</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

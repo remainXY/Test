@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="1.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>70</x>
+      <y>84</y>
+      <w>994</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>title: altitude_display
+
+_altitudeReader~id1_|_altimeterRemoteTerminal~id2_|_bufferReader~id3_|_buffer~id4_|_calculator~id5_|_displayer~id6_
+
+id1-&gt;id2:id1,id2:e1,e2
+id2-&gt;id1:id2,id1:e4,e3
+id1-&gt;id4:id1,id4:e5{ready=0},e6{ready=1}
+id4-&gt;id6:id4,id6:e7,e8
+
+
+iframe{:int (p=1) ISR [ready==0]
+
+id3-&gt;id4:id3,id4:e9,e10
+id4-&gt;id3:id4,id3:e12,e11
+id3-&gt;id5:id3,id5:e13,e14
+id5-&gt;id4:id5,id4:e16,e15
+id4-&gt;id6:id4,id6:e17,e18
+
+iframe}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>749</x>
+      <y>427</y>
+      <w>168</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>spec:
+0&lt;e5-e4&lt;1
+0&lt;proj(e6-e5)&lt;4
+0&lt;e7-e6&lt;1
+2&lt;=proj(e8-e7)&lt;=6
+
+14&lt;=proj(e18-e9)&lt;=25
+
+
+prop:
+10&lt;=proj(e4-e1)&lt;=20
+e18-e1&lt;49
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

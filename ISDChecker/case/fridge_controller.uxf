@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="1.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>48</x>
+      <y>40</y>
+      <w>944</w>
+      <h>328</h>
+    </coordinates>
+    <panel_attributes>title: fridge_controller
+_sensorReader~id1_|_sensor~id2_|_dataReader~id3_|_dataChecker~id4_|_dataBuffer~id5_|_openOrClose~id6_|_Proc~id7_
+
+id1-&gt;id2:id1,id2:e1{ready=0},e2
+id2-&gt;id1:id2,id1:e4,e3
+
+id1-&gt;id4:id1,id4:e5,e6
+id4-&gt;id5:id4,id5:e7,e8{ready=1}
+
+id5-&gt;id7:id5,id7:e9,e10
+
+
+iframe{:int  (p=1) ISR [ready==1]
+id3-&gt;id5:id3,id5:e11,e12
+id5-&gt;id3:id5,id3:e14,e13
+
+id3-&gt;id6:id3,id6:e15,e16
+iframe}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>648</x>
+      <y>400</y>
+      <w>192</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>spec:
+
+2&lt;=proj(e4-e1)&lt;=4
+0&lt;e5-e4&lt;1
+0&lt;proj(e6-e5)&lt;4
+0&lt;e7-e6&lt;1
+1&lt;=proj(e8-e7)&lt;=2
+0&lt;e9-e8&lt;1
+2&lt;=proj(e10-e9)&lt;=4
+4&lt;proj(e16-e11)&lt;8
+
+
+prop:
+e10-e1&lt;20</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
